@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js""></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 230px;
+  background-size: 100% 100%;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'PT Serif', serif;
+  text-align: center;
+  font-size: 70px;
+  color: #FFEBCD;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #FFFAF0;
+  margin: 0px 0 70px 0;
+}
+p {
+  font-family: 'PT Serif', serif;
+  font-size: 25px;
+  color: #FFEBCD;
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 12px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 21px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  font-family: helvetica, sans-serif;
+  opacity: 0;
+  font-size: 20px;
+  color: #FFFAF0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://477612.smushcdn.com/1512865/wp-content/uploads/2020/06/01_windrunner_placard.jpg?lossy=1&strip=1&webp=1");
+}
+.second{
+  background-image: url("https://477612.smushcdn.com/1512865/wp-content/uploads/2020/06/04_edgedancer_placard.jpg?lossy=1&strip=1&webp=1");
+}
+.dessert{
+  background-image: url("https://477612.smushcdn.com/1512865/wp-content/uploads/2020/06/07_elsecaller_placard.jpg?lossy=1&strip=1&webp=1");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 54px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 18px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Knights Radiant</h1>
+<h2>My Favorite Orders</h2>
+<div class="first">
+  <p>Windrunners<br />
+  <small>Windrunner oaths are themed toward protection, particularly defending innocents or those who are unable to protect themselves. </small></p>
+</div>
+
+<div class="second">
+  <p>Edgedancers<br />
+  <small>Edgedancer oaths are themed around remembering the ordinary people of the world—those who aren’t powerful generals or Radiants.</small></p>
+</div>
+
+<div class="dessert">
+  <p>Elsecallers<br />
+  <small>Elsecaller oaths theme is progress—becoming better with each oath, seeking to explore their true potential and reach it.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
